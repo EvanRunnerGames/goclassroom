@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     font-family: Arial, Helvetica, sans-serif;
     color: #5f6368;
@@ -12,15 +13,11 @@ html, body {
     overflow: hidden;
 }
 
-
-a {
+a, abbr {
     text-decoration: none;
 }
 
-abbr {
-    text-decoration: none;
-}
-
+/* Classroom Section */
 .classroom {
     display: flex;
     flex-direction: row;
@@ -36,15 +33,23 @@ abbr {
     top: 20px;
 }
 
+/* Menu Activation */
 .menu-activate {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 48px;
     height: 48px;
-    transform: translate(0px,10px);
+    transform: translateY(10px); /* Use translateY for clarity */
 }
 
+.menu-activate:hover {
+    cursor: pointer;
+    background-color: #e8e4e4;
+    border-radius: 100px;
+}
+
+/* Sidebar Buttons */
 .sidebar-button {
     display: flex;
     flex-direction: row;
@@ -58,8 +63,8 @@ abbr {
 }
 
 .sidebar-button:hover {
-    cursor: pointer;
     background-color: #f8f4f4;
+    cursor: pointer;
 }
 
 .selected-sidebar {
@@ -67,36 +72,25 @@ abbr {
     background-color: #f0f4fc;
 }
 
-.menu-activate:hover {
-    cursor: pointer;
-    background-color: #e8e4e4;
-    border-radius: 100px;
-}
-
+/* Classroom Text */
 .classroom-text {
     position: absolute;
     font-size: 22px;
     font-weight: 400;
     color: #5f6368;
     left: 40px;
-    
 }
 
 .classroom:hover .classroom-text {
     color: rgb(30,142,62);
     text-decoration: underline;
-
-    
 }
 
-.classroom:hover {
-    cursor: pointer;
-}
-
+/* Header */
 header {
     width: 100%;
     height: 64px;
-    border-bottom:#e0e0e0 solid 1px;
+    border-bottom: #e0e0e0 solid 1px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -104,8 +98,9 @@ header {
     z-index: 2000;
 }
 
+/* Game Section */
 .game-section {
-    transform: translate(0px, -110px);
+    transform: translateY(-110px);
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -114,13 +109,13 @@ header {
     align-items: center;
 }
 
-
-
+/* Game Links */
 .game-links {
     display: flex;
     flex-direction: row;
 }
 
+/* Normal Button */
 .normal-button {
     border-radius: 6px;
     width: 112px;
@@ -135,6 +130,7 @@ header {
     cursor: pointer;
 }
 
+/* Join & Create Class Buttons */
 .join-class {
     background-color: #2074ec;
     color: white;
@@ -152,6 +148,7 @@ header {
     background-color: #f8fcfc;
 }
 
+/* Cancel Button */
 .cancel-button {
     color: #5f6368;
 }
@@ -161,14 +158,14 @@ header {
     cursor: pointer;
 }
 
+/* Pop-Up Styles */
 .pop-up {
-    display: none;
+    display: none; /* Initially hidden */
     opacity: 1;
-    position: fixed;
+    position: fixed; /* Fixed position for overlay effect */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    position: absolute;
     width: 480px;
     background-color: white;
     border-radius: 6px;
@@ -180,11 +177,11 @@ header {
 
 .pop-up-footer {
     position: absolute;
-    bottom: 0; /* Stick the child div to the bottom */
+    bottom: 0;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end; /* Change 'right' to 'flex-end' for proper flex alignment */
-    align-items: center; /* Center items vertically */
+    justify-content: flex-end;
+    align-items: center;
     width: 100%;
     margin-bottom: 10px;
     background-color: white;
@@ -192,40 +189,41 @@ header {
     height: 40px;
 }
 
-
+/* Overlay */
 .overlay {
-    display: none;
-    position: fixed; /* Ensures the overlay covers the entire screen */
+    display: none; /* Initially hidden */
+    position: fixed; /* Covers entire screen */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: black;
     opacity: 0.5;
-    z-index: 999; /* Places the overlay on top of other elements */
+    z-index: 999;
 }
 
+/* Pop-Up Section */
 .pop-up-section {
     border-radius: 6px;
     width: 440px;
     margin-left: 13px;
-    border:#e0e0e0 solid 1px;
+    border: #e0e0e0 solid 1px;
     height: 180px;
-    background-color: #ffff;
 }
 
 .pop-up-title {
     margin-left: 13px;
     font-size: 17px;
-    font-weight:normal;
+    font-weight: normal;
 }
 
 .pop-up-description {
     margin-left: 13px;
     font-size: 12px;
-    font-weight:normal;
+    font-weight: normal;
 }
 
+/* Join Button */
 .join-button {
     color: #2064cc;
 }
@@ -234,6 +232,7 @@ header {
     background-color: #e0e4fc;
 }
 
+/* Pop-Up Textbox */
 .pop-up-textbox {
     border-radius: 6px;
     height: 56px;
@@ -243,13 +242,13 @@ header {
     border-color: #e0e0e0;
 }
 
+/* Headers */
 .header-1 {
     display: flex;
     flex-direction: row;
     width: 50%;
     justify-content: left;
-    transform: translate(20px, 0px);
-
+    transform: translate(20px, 0);
 }
 
 .header-2 {
@@ -257,9 +256,13 @@ header {
     flex-direction: row;
     width: 50%;
     justify-content: right;
-    transform: translate(-20px, 0px);
+    transform: translate(-20px, 0);
+    pointer-events: all;
 }
 
+
+
+/* Misc Styles */
 .menu-button {
     color: #5f6368;
 }
@@ -269,36 +272,33 @@ header {
     text-decoration: underline;
 }
 
+/* User Icon */
 .user {
-    transform: translate(0px, 18px);
+    transform: translateY(18px);
     width: 33px;
     height: 33px;
     color: white;
     background-color: #0894a4;
-    border-radius: 100px;
-    margin-left: 10px;
-    margin-right: 10px;
+    border-radius: 50%; /* Use 50% for circular shape */
+    margin: 0 10px; /* Combined left and right margin */
     box-sizing: border-box;
 }
 
 .user:hover {
-    color: white;
     background-color: #0894a4;
-    border-radius: 100px;
     outline: 4px solid #f8f4f4; /* Use outline instead of border */
-    
 }
 
-
+/* Commands Dropdown */
 #commands option {
     display: none; /* Hide all options by default */
 }
 
-/* Show options if the first character is a slash */
 #class-code:valid + #commands option {
-    display: block; /* Allow only valid options */
+    display: block; /* Show valid options */
 }
 
+/* Pop-Up Content */
 .pop-up-content {
     overflow-x: hidden;
     overflow-y: scroll;
@@ -306,6 +306,7 @@ header {
     height: 80%;
 }
 
+/* Sidebar */
 .menu-sidebar {
     width: 350px;
     height: 100%;
@@ -313,7 +314,7 @@ header {
     border-right: #e0e0e0 solid 1px;
     display: flex;
     flex-direction: column;
-    overflow-y: auto; /* Add scrolling if content exceeds the sidebar height */
+    overflow-y: auto; /* Scroll if content exceeds height */
     transition: all 0.25s ease-in-out;
 }
 
@@ -322,7 +323,7 @@ header {
     margin-top: 15px;
 }
 
-
+/* Content Section */
 .content {
     height: 100%;
     width: 100%;
@@ -330,8 +331,9 @@ header {
     flex-direction: row;
 }
 
+/* Responsive Styles */
 @media (max-height: 690px) {
     .pop-up {
-        height: 80%;
+        height: 80%; /* Adjust height for smaller screens */
     }
 }
