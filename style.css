@@ -1,0 +1,297 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5f6368;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+.classroom {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    position: absolute;
+    left: 60px;
+}
+
+.classroom-logo {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 20px;
+}
+
+.menu-activate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    transform: translate(0px,10px);
+}
+
+.menu-logo {
+
+}
+
+.menu-activate:hover {
+    cursor: pointer;
+    background-color: #e8e4e4;
+    border-radius: 100px;
+}
+
+.classroom-text {
+    position: absolute;
+    font-size: 22px;
+    font-weight: 400;
+    color: #5f6368;
+    left: 40px;
+    
+}
+
+.classroom:hover .classroom-text {
+    color: rgb(30,142,62);
+    text-decoration: underline;
+
+    
+}
+
+.classroom:hover {
+    cursor: pointer;
+}
+
+header {
+    width: 100%;
+    height: 64px;
+    border-bottom:#e0e0e0 solid 1px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.game-section {
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.normal-button {
+    border-radius: 6px;
+    width: 112px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease-in-out;
+}
+
+.normal-button:hover {
+    cursor: pointer;
+}
+
+.join-class {
+    background-color: #2074ec;
+    color: white;
+}
+
+.join-class:hover {
+    background-color: #2064cc;
+}
+
+.create-class {
+    color: #2064cc;
+}
+
+.create-class:hover {
+    background-color: #f8fcfc;
+}
+
+.cancel-button {
+    color: #5f6368;
+}
+
+.cancel-button:hover {
+    background-color: #f8fcfc;
+    cursor: pointer;
+}
+
+.pop-up {
+    display: none;
+    opacity: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 480px;
+    background-color: white;
+    border-radius: 6px;
+    z-index: 1000;
+    height: 80%;
+    transition: all 0.3s ease-in-out;
+}
+
+.pop-up-footer {
+    position: absolute;
+    bottom: 0; /* Stick the child div to the bottom */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; /* Change 'right' to 'flex-end' for proper flex alignment */
+    align-items: center; /* Center items vertically */
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: white;
+    border-top: #e0e0e0 solid 1px;
+    height: 40px;
+}
+
+
+.overlay {
+    display: none;
+    position: fixed; /* Ensures the overlay covers the entire screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 999; /* Places the overlay on top of other elements */
+}
+
+.pop-up-section {
+    border-radius: 6px;
+    width: 440px;
+    margin-left: 13px;
+    border:#e0e0e0 solid 1px;
+    height: 180px;
+    background-color: #ffff;
+}
+
+.pop-up-title {
+    margin-left: 13px;
+    font-size: 17px;
+    font-weight:normal;
+}
+
+.pop-up-description {
+    margin-left: 13px;
+    font-size: 12px;
+    font-weight:normal;
+}
+
+.join-button {
+    color: #2064cc;
+}
+
+.join-button:hover {
+    background-color: #e0e4fc;
+}
+
+.pop-up-textbox {
+    border-radius: 6px;
+    height: 56px;
+    width: 280px;
+    border-width: 1px;
+    margin-left: 13px;
+    border-color: #e0e0e0;
+}
+
+.header-1 {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: left;
+    transform: translate(20px, 0px);
+
+}
+
+.header-2 {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: right;
+    transform: translate(-20px, 0px);
+}
+
+.menu-button {
+    color: #5f6368;
+}
+
+.user {
+    transform: translate(0px, 18px);
+    width: 33px;
+    height: 33px;
+    color: white;
+    background-color: #0894a4;
+    border-radius: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.link {
+    color: #1a73e8;
+    text-decoration: underline;
+}
+
+.user:hover {
+    color: white;
+    background-color: #0894a4;
+    border-radius: 100px;
+}
+
+#commands option {
+    display: none; /* Hide all options by default */
+}
+
+/* Show options if the first character is a slash */
+#class-code:valid + #commands option {
+    display: block; /* Allow only valid options */
+}
+
+.pop-up-content {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    height: 80%;
+}
+
+.menu-sidebar {
+    width: 300px;
+    height: calc(100% - 64px);
+    background-color: white;
+    border-right: #e0e0e0 solid 1px;
+    display: flex;
+    flex-direction: column;
+    position: absolute; /* Positioned relative to the parent container */
+    top: 0; /* Stick to the top of the parent container */
+    left: 0; /* Stick to the left of the parent container */
+    overflow-y: auto; /* Add scrolling if content exceeds the sidebar height */
+}
+
+
+.content {
+    height: 100%;
+}
