@@ -150,8 +150,9 @@ header {
     background-color: white;
     border-radius: 6px;
     z-index: 1000;
-    height: 80%;
+    height: fit-content;
     transition: all 0.3s ease-in-out;
+    max-height: 600px;
 }
 
 .pop-up-footer {
@@ -294,4 +295,10 @@ header {
 
 .content {
     height: 100%;
+}
+
+@media (max-height: 690px) {
+    .pop-up {
+        height: 80%;
+    }
 }
