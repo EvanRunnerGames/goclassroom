@@ -314,6 +314,7 @@ header {
     display: flex;
     flex-direction: column;
     overflow-y: auto; /* Add scrolling if content exceeds the sidebar height */
+    transition: all 0.25s ease-in-out;
 }
 
 .menu-sidebar-section {
