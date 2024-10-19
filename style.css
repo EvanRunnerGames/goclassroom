@@ -5,10 +5,13 @@
     font-weight: bold;
 }
 
-body {
+html, body {
+    height: 100vh;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
+
 
 a {
     text-decoration: none;
@@ -42,8 +45,26 @@ abbr {
     transform: translate(0px,10px);
 }
 
-.menu-logo {
+.sidebar-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 250px;
+    height: 42px;
+    border-left: transparent solid 30px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    gap: 16px;
+}
 
+.sidebar-button:hover {
+    cursor: pointer;
+    background-color: #f8f4f4;
+}
+
+.selected-sidebar {
+    border-left: #f0f4fc solid 30px;
+    background-color: #f0f4fc;
 }
 
 .menu-activate:hover {
@@ -84,7 +105,7 @@ header {
 }
 
 .game-section {
-    margin-top: 110px;
+    transform: translate(0px, -110px);
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -92,6 +113,8 @@ header {
     justify-content: center;
     align-items: center;
 }
+
+
 
 .game-links {
     display: flex;
@@ -241,6 +264,11 @@ header {
     color: #5f6368;
 }
 
+.link {
+    color: #1a73e8;
+    text-decoration: underline;
+}
+
 .user {
     transform: translate(0px, 18px);
     width: 33px;
@@ -250,18 +278,17 @@ header {
     border-radius: 100px;
     margin-left: 10px;
     margin-right: 10px;
-}
-
-.link {
-    color: #1a73e8;
-    text-decoration: underline;
+    box-sizing: border-box;
 }
 
 .user:hover {
     color: white;
     background-color: #0894a4;
     border-radius: 100px;
+    outline: 4px solid #f8f4f4; /* Use outline instead of border */
+    
 }
+
 
 #commands option {
     display: none; /* Hide all options by default */
@@ -280,21 +307,26 @@ header {
 }
 
 .menu-sidebar {
-    width: 300px;
-    height: calc(100% - 64px);
+    width: 350px;
+    height: 100%;
     background-color: white;
     border-right: #e0e0e0 solid 1px;
     display: flex;
     flex-direction: column;
-    position: absolute; /* Positioned relative to the parent container */
-    top: 0; /* Stick to the top of the parent container */
-    left: 0; /* Stick to the left of the parent container */
     overflow-y: auto; /* Add scrolling if content exceeds the sidebar height */
+}
+
+.menu-sidebar-section {
+    border-bottom: #e0e0e0 solid 1px;
+    margin-top: 15px;
 }
 
 
 .content {
     height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
 @media (max-height: 690px) {
