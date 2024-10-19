@@ -19,10 +19,10 @@ function checkClassCode() {
         alert("ping succesful✅");
     } 
     else if (classCode === "plexy") {
-        window.location.replace("classes/plmath/index.html");
+        window.location.replace("classes/plmath/");
     }
     else if (classCode === "pizza") {
-        window.location.replace("classes/pizzamath/index.html");
+        window.location.replace("classes/pizzamath/");
     }
     else {
         alert("Something went wrong\nCouldn't join the class. Invalid Code. You can find codes here \n\nhttps://sites.google.com/view/goclassroomcodes/home")
