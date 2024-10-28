@@ -48,3 +48,6 @@ function checkClassCode() {
         window.location.href = "index.html";
     }
 }
+
+
+//comment
